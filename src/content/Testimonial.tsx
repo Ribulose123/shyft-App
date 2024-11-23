@@ -1,6 +1,26 @@
-import React from 'react';
+import React, { useEffect, useRef,useState } from 'react';
+import {  motion, useScroll, useTransform } from 'framer-motion';
 
 const Testimonial: React.FC = () => {
+  const targetRef = useRef<HTMLDivElement | null>(null)
+  
+  const [isSmallDevice, setIsSmallDevice] = useState(false);
+
+  useEffect(()=>{
+    const handleResize = ()=>{
+      setIsSmallDevice(window.innerWidth <= 640);
+    }
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return window.removeEventListener('resize', handleResize)
+  },[])
+
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"],
+  });
+
+  const translateX = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
   return (
     <div className="flex flex-col items-center space-y-6">
       <p className="text-[#0968E8] border border-solid border-[#0968E8] bg-white px-4 py-1 rounded">
@@ -13,7 +33,9 @@ const Testimonial: React.FC = () => {
         Here's what some of our clients say about our platform
       </p>
 
-      <div className="flex flex-wrap justify-center gap-6 mt-8">
+      <motion.div 
+      ref={targetRef}  className={`lg:grid lg:grid-cols-3 gap-4 overflow-x-auto lg:overflow-visible flex lg:flex-none`}
+      style={isSmallDevice ? { x: translateX } : undefined}>
         {/* Testimonial 1 */}
         <div className="w-80 h-64 bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-center items-center">
           <figcaption className="text-center text-gray-800">
@@ -24,7 +46,7 @@ const Testimonial: React.FC = () => {
             </p>
             <div className="mt-6 flex items-center gap-3 justify-center">
               <img
-                src="/public/img/man1.webp"
+                src="/img/man1.webp"
                 alt="Seun Abu"
                 className="w-12 h-12 rounded-full object-cover shadow-md"
               />
@@ -50,7 +72,7 @@ const Testimonial: React.FC = () => {
             </p>
             <div className="mt-6 flex items-center gap-3 justify-center">
               <img
-                src="/public/img/girl1.webp"
+                src="/img/girl1.webp"
                 alt="Amaka Ibe"
                 className="w-12 h-12 rounded-full object-cover shadow-md"
               />
@@ -75,7 +97,7 @@ const Testimonial: React.FC = () => {
             </p>
             <div className="mt-6 flex items-center gap-3 justify-center">
               <img
-                src="/public/img/man3.jpg"
+                src="/img/man3.jpg"
                 alt="Dr. Okposio Kp"
                 className="w-12 h-12 rounded-full object-cover shadow-md"
               />
@@ -99,7 +121,7 @@ const Testimonial: React.FC = () => {
             </p>
             <div className="mt-6 flex items-center gap-3 justify-center">
               <img
-                src="/public/img/girl1.avif"
+                src="/img/girl1.avif"
                 alt="Nessie KP"
                 className="w-12 h-12 rounded-full object-cover shadow-md"
               />
@@ -123,7 +145,7 @@ const Testimonial: React.FC = () => {
             </p>
             <div className="mt-6 flex items-center gap-3 justify-center">
               <img
-                src="/public/img/man.webp"
+                src="/img/man.webp"
                 alt="Victor Osazuwa"
                 className="w-12 h-12 rounded-full object-cover shadow-md"
               />
@@ -146,7 +168,7 @@ const Testimonial: React.FC = () => {
             </p>
             <div className="mt-6 flex items-center gap-3 justify-center">
               <img
-                src="/public/img/man.webp"
+                src="/img/man.webp"
                 alt="John Doe"
                 className="w-12 h-12 rounded-full object-cover shadow-md"
               />
@@ -169,7 +191,7 @@ const Testimonial: React.FC = () => {
             </p>
             <div className="mt-6 flex items-center gap-3 justify-center">
               <img
-                src="/public/img/girl1.webp"
+                src="/img/girl1.webp"
                 alt="Jane Smith"
                 className="w-12 h-12 rounded-full object-cover shadow-md"
               />
@@ -182,7 +204,7 @@ const Testimonial: React.FC = () => {
             </div>
           </figcaption>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

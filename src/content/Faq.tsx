@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
 const Faq: React.FC = () => {
-  
   const [accordions, setAccordions] = useState<boolean[]>([false, false, false, false, false]);
 
-  // Toggle the state of a specific accordion
   const toggleAccordion = (index: number) => {
     setAccordions((prev) =>
-      prev.map((item, idx) => (idx === index ? !item : item)) 
+      prev.map((item, idx) => (idx === index ? !item : item))
     );
   };
 
@@ -36,8 +34,8 @@ const Faq: React.FC = () => {
   ];
 
   return (
-    <div className="flex sm:flex-row flex-col items-center justify-center sm:gap-36 gap-6">
-      <div className="flex justify-start items-start flex-col">
+    <div className="flex sm:flex-row flex-col items-center justify-center sm:gap-36 gap-6 px-4 sm:px-0 text-center sm:text-left">
+      <div className="flex justify-start items-start flex-col sm:text-left text-center">
         <p className="border border-solid border-blue-600 text-blue-600 p-2 text-[16px]">FAQ'S</p>
         <strong className="font-semibold text-[30px] capitalize flex flex-col">
           Frequently Asked <span>Questions</span>
@@ -46,7 +44,7 @@ const Faq: React.FC = () => {
         <span className="text-blue-600">shytyhumansresourcetech.com</span>
       </div>
 
-      <div>
+      <div className="w-full sm:w-auto">
         {faqItems.map((item, index) => (
           <div key={index} className="border-b-2 border-slate-300 p-4">
             <div className="flex justify-between items-center">
@@ -60,7 +58,7 @@ const Faq: React.FC = () => {
                 accordions[index] ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
               }`}
             >
-              <p className="text-[#959595] font-normal text-[13px]">{item.answer}</p>
+              <p className="text-[#959595] font-normal text-[13px] text-start">{item.answer}</p>
             </div>
           </div>
         ))}
