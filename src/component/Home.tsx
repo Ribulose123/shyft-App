@@ -1,35 +1,17 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import Navbar from "./Navbar";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import Pricing from "../content/Pricing";
 import Testimonial from "../content/Testimonial";
 import Faq from "../content/Faq";
 import Footerpage from "../content/Footerpage";
-import { motion, useTransform, useScroll } from "framer-motion";
+import ProductSection from "../content/ProductSection";
 
 const Home: React.FC = () => {
-  const targetRef = useRef<HTMLDivElement | null>(null);
+ 
 
-  const [isSmallDevice, setIsSmallDevice] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallDevice(window.innerWidth <= 640); // Small devices (sm breakpoint)
-    };
-
-    handleResize(); 
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start end", "end start"],
-  });
-
-  const translateX = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
-
+ 
+  
   return (
     <div className="bg-gradient-to-tr from-white to-blue-400 w-screen h-full ">
       {/* Home Page Navbar */}
@@ -73,36 +55,7 @@ const Home: React.FC = () => {
         </section>
 
         <section className="mt-10 flex flex-col justify-center items-center gap-3" id="Product">
-          <div className="flex">
-            <p className="text-[#0968E8] border border-solid border-[#0968E8] bg-white p-1 rounded">
-              Product Highlight
-            </p>
-          </div>
-          <motion.div
-            ref={targetRef}
-            className={`lg:grid lg:grid-cols-3 gap-4 overflow-x-auto lg:overflow-visible flex lg:flex-none`}
-            style={isSmallDevice ? { x: translateX } : undefined}
-          >
-            {[
-              "/img/Group 10048 (1).png",
-              "/img/Group 10048.png",
-              "/img/Group 10049 (1).png",
-              "/img/Group 10049.png",
-              "/img/Group 10050.png",
-              "/img/Group 10050 (1).png",
-            ].map((src, index) => (
-              <motion.div
-                key={index}
-                className="flex-shrink-0 w-96 lg:w-auto lg:flex-shrink"
-              >
-                <img
-                  src={src}
-                  alt={`Product ${index + 1}`}
-                  className="h-auto"
-                />
-              </motion.div>
-            ))}
-          </motion.div>
+         <ProductSection/>
         </section>
         <section className="mt-6 flex flex-col justify-evenly items-center">
   {/* First Row */}
