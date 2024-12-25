@@ -10,12 +10,12 @@ interface SignInpops {
 }
 
 const SignIn: React.FC<SignInpops> = ({ step, handleNext }) => {
-  const [email, setEmail] = useState<string>("");
+  
   const [companyEmail, setCompanyEmail] = useState<string>("");
   const [companyName, setCompanyName] = useState<string>("");
   const [country, setCountry] = useState<string>("");
   const [noOfEmployees, setNoOfEmployees] = useState<number>();
-  const [role, setRole] = useState<string>("");
+ 
 
   const registration = async () => {
     try {
@@ -25,8 +25,6 @@ const SignIn: React.FC<SignInpops> = ({ step, handleNext }) => {
         companyEmail,
       country,
       noOfEmployees: noOfEmployees || 0,
-      role,
-      personalEmail: email,
       companyName,
       });
 
