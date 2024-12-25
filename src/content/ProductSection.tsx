@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css'
+import "../swiper1.css"
 
 const ProductSection: React.FC = () => {
   const images = [

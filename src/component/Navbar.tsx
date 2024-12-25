@@ -3,6 +3,7 @@ import { FaTimes, FaBars } from "react-icons/fa";
 import { FaClock } from "react-icons/fa6";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const pathway = useLocation();
@@ -52,12 +53,18 @@ const Navbar: React.FC = () => {
             ))}
           </div>
           <div className="flex gap-3">
-            <button className="bg-white text-blue-500 font-semibold py-2 px-4 rounded hover:bg-gray-200 border border-solid">
-              Login
-            </button>
-            <button className="bg-blue-700 text-white font-semibold py-2 px-4 rounded hover:bg-blue-900">
-              Sign In
-            </button>
+          <Link to='/login'>
+              <button className="bg-white text-blue-500 font-semibold py-2 px-4 rounded hover:bg-gray-200 border border-solid">
+                Login
+              </button>
+              </Link>
+
+                <Link to='/signin'>
+                <button className="bg-blue-700 text-white font-semibold py-2 px-4 rounded hover:bg-blue-900">
+                Sign In
+              </button>
+                </Link>
+              
           </div>
         </div>
 
@@ -107,12 +114,18 @@ const Navbar: React.FC = () => {
 
             {/* Buttons */}
             <div className="flex gap-3">
+              <Link to='/login'>
               <button className="bg-white text-blue-500 font-semibold py-2 px-4 rounded hover:bg-gray-200 border border-solid">
                 Login
               </button>
-              <button className="bg-blue-700 text-white font-semibold py-2 px-4 rounded hover:bg-blue-900">
+              </Link>
+
+                <Link to='/signin'>
+                <button className="bg-blue-700 text-white font-semibold py-2 px-4 rounded hover:bg-blue-900">
                 Sign In
               </button>
+                </Link>
+              
             </div>
           </div>
         </>
