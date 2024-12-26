@@ -37,11 +37,11 @@ const Pricing: React.FC = () => {
           </button>
         ))}
       </div>
-      <div className="mt-10 grid grid-cols-3 gap-3 sm:gap-4 w-full h-[50%] items-center">
+      <div className="mt-10 grid grid-cols-3 gap-8 sm:gap-4 w-full h-[50%] items-center -ml-6 sm:-ml-0">
         {pricingDetials === "Monthly" && (
           <>
             {/* Starter Plan */}
-            <div className="group bg-white/20 backdrop-blur-lg border border-white rounded-lg shadow-lg p-2 w-[150px]  sm:w-[380px] h-[95%] sm:h-full sm:p-6 hover:bg-blue-600 hover:text-white transition-all hover:scale-100">
+            <div className="group bg-white/20 backdrop-blur-lg border border-white rounded-lg shadow-lg p-2 w-[125px]  sm:w-[380px] h-[90%] sm:h-full sm:p-6 hover:bg-blue-600 hover:text-white transition-all hover:scale-100">
               <strong className="text-[12px] sm:text[15px] font-bold">Starter Plan</strong>
 
               <p className="text-[8px] sm:text[13px] font-medium text-[#ADADAD] group-hover:text-white">
@@ -79,7 +79,7 @@ const Pricing: React.FC = () => {
             </div>
 
             {/* Growth Plan */}
-            <div className="group bg-white/20 backdrop-blur-lg border border-white rounded-lg shadow-lg p-2 w-[150px]  sm:w-[380px] h-[95%] sm:h-full sm:p-6 hover:bg-blue-600 hover:text-white transition-all hover:scale-100">
+            <div className="group bg-white/20 backdrop-blur-lg border border-white rounded-lg shadow-lg p-2 w-[125px]  sm:w-[380px] h-[90%] sm:h-full sm:p-6 hover:bg-blue-600 hover:text-white transition-all hover:scale-100">
               <strong className="text-[12px] sm:text-[15px]  font-bold">Growth Plan</strong>
 
               <p className="text-[8px] sm:text-[13px]  font-medium text-[#ADADAD] group-hover:text-white">
@@ -110,15 +110,15 @@ const Pricing: React.FC = () => {
               </div>
 
               <div className="flex items-center justify-center">
-                <button className="bg-blue-700 group-hover:bg-white group-hover:text-blue-700 text-white text-[8px] sm:text[13px] border border-solid border-white p-2 sm:p-3 rounded-xl mt-4 flex items-center justify-center w-[70%] sm:w-full ">
+                <button className="bg-blue-700 group-hover:bg-white group-hover:text-blue-700 text-white text-[8px] sm:text[13px] border border-solid border-white p-2 sm:p-3 rounded-xl mt-2 flex items-center justify-center w-[70%] sm:w-full ">
                   Select this plan
                 </button>
               </div>
             </div>
 
             {/* Business Plan */}
-            <div className="group bg-white/20 backdrop-blur-lg border border-white rounded-lg shadow-lg p-2 sm:p-6 w-[150px]
-            sm:w-[380px] h-[95%] sm:h-full hover:bg-blue-600 hover:text-white transition-all">
+            <div className="group bg-white/20 backdrop-blur-lg border border-white rounded-lg shadow-lg p-2 sm:p-6 w-[125px]
+            sm:w-[380px] h-[90%] sm:h-full hover:bg-blue-600 hover:text-white transition-all">
               <strong className="text-[12px] sm:text-[15px] font-bold">Business Plan</strong>
 
               <p className="text-[8px] sm:text-[13px] font-medium text-[#ADADAD] group-hover:text-white">
@@ -149,7 +149,7 @@ const Pricing: React.FC = () => {
               </div>
 
               <div className="flex items-center justify-center">
-                <button className="bg-blue-700 group-hover:bg-white group-hover:text-blue-700 text-white text-[8px] sm:text[13px] border border-solid border-white p-2 sm:p-3 rounded-xl mt-2 mb-4  sm:mt-4 flex items-center justify-center w-[70%] sm:w-full ">
+                <button className="bg-blue-700 group-hover:bg-white group-hover:text-blue-700 text-white text-[8px] sm:text[13px] border border-solid border-white p-2 sm:p-3 rounded-xl mt-2 mb-8 sm:mt-4 flex items-center justify-center w-[70%] sm:w-full ">
                   Select this plan
                 </button>
               </div>
@@ -158,12 +158,12 @@ const Pricing: React.FC = () => {
         )}
       </div>
 
-      <div className="mt-1 grid grid-cols-3 gap-3 sm:gap-4 w-full h-[50%] items-center ">
+      <div className="mt-1 grid grid-cols-3 gap-8 sm:gap-4 w-full h-[50%] items-center -ml-6 sm:-ml-0 ">
         {pricingDetials === "Yearly" && (
            <>
            {/* Starter Plan */}
-           <div className="group bg-white/20 backdrop-blur-lg border border-white rounded-lg shadow-lg p-2 sm:p-6 w-[150px]
-            sm:w-[380px] h-[95%] sm:h-full hover:bg-blue-600 hover:text-white transition-all">
+           <div className="group bg-white/20 backdrop-blur-lg border border-white rounded-lg shadow-lg p-2 sm:p-6 w-[125px]
+            sm:w-[380px] h-[90%] sm:h-full hover:bg-blue-600 hover:text-white transition-all">
              <strong className="text-[10px] sm:text-[15px] font-bold">Starter Plan</strong>
 
              <p className="text-[8px] sm:text-[13px] font-medium text-[#ADADAD] group-hover:text-white">
@@ -201,8 +201,8 @@ const Pricing: React.FC = () => {
            </div>
 
            {/* Growth Plan */}
-           <div className="group bg-white/20 backdrop-blur-lg border border-white rounded-lg shadow-lg p-2 sm:p-6 w-[150px]
-            sm:w-[380px] h-[95%] sm:h-full hover:bg-blue-600 hover:text-white transition-all">
+           <div className="group bg-white/20 backdrop-blur-lg border border-white rounded-lg shadow-lg p-2 sm:p-6 w-[125px]
+            sm:w-[380px] h-[90%] sm:h-full hover:bg-blue-600 hover:text-white transition-all">
              <strong className="text-[10px] sm:text-[15px] font-bold">Growth Plan</strong>
 
              <p className="text-[8px] sm:text-[13px] font-medium text-[#ADADAD] group-hover:text-white">
@@ -233,15 +233,15 @@ const Pricing: React.FC = () => {
              </div>
 
              <div className="flex items-center justify-center">
-               <button className="bg-blue-700 group-hover:bg-white group-hover:text-blue-700 text-white text-[8px] sm:text[13px] border border-solid border-white p-2 sm:p-3 rounded-xl mt-5 flex items-center justify-center w-[70%] sm:w-full">
+               <button className="bg-blue-700 group-hover:bg-white group-hover:text-blue-700 text-white text-[8px] sm:text[13px] border border-solid border-white p-2 sm:p-3 rounded-xl mt-2 mb-3 flex items-center justify-center w-[70%] sm:w-full">
                  Select this plan
                </button>
              </div>
            </div>
 
            {/* Business Plan */}
-           <div className="group bg-white/20 backdrop-blur-lg border border-white rounded-lg shadow-lg p-2 sm:p-6 w-[150px]
-            sm:w-[380px] h-[95%] sm:h-full hover:bg-blue-600 hover:text-white transition-all">
+           <div className="group bg-white/20 backdrop-blur-lg border border-white rounded-lg shadow-lg p-2 sm:p-6 w-[125px]
+            sm:w-[380px] h-[90%] sm:h-full hover:bg-blue-600 hover:text-white transition-all">
              <strong className="text-[10px] sm:text-[15px] font-bold">Business Plan</strong>
 
              <p className="text-[8px] sm:text-[13px] font-medium text-[#ADADAD] group-hover:text-white">
@@ -272,7 +272,7 @@ const Pricing: React.FC = () => {
              </div>
 
              <div className="flex items-center justify-center">
-               <button className="bg-blue-700 group-hover:bg-white group-hover:text-blue-700 text-white text-[8px] sm:text[13px] border border-solid border-white p-2 sm:p-3 rounded-xl mt-3 mb-2 flex items-center justify-center w-[70%] sm:w-full ">
+               <button className="bg-blue-700 group-hover:bg-white group-hover:text-blue-700 text-white text-[8px] sm:text[13px] border border-solid border-white p-2 sm:p-3 rounded-xl mt-2 mb-7 flex items-center justify-center w-[70%] sm:w-full ">
                  Select this plan
                </button>
              </div>
