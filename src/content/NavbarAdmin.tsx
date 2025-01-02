@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { IoBarChartOutline } from "react-icons/io5";
 import { IoIosPeople, IoIosLogOut } from "react-icons/io";

@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { db } from "../Config/Firebase";
 import { useNavigate } from "react-router-dom";
 import { setDoc, doc } from "firebase/firestore";
-import {  } from "react-icons/fa6";
+import { FaCheckDouble } from "react-icons/fa6";
 
 const AdminForm: React.FC = () => {
   const [fullname, setFullName] = useState<string>("");
