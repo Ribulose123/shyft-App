@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { IoFilter, IoPeopleOutline } from "react-icons/io5";
-import { CiClock2 } from "react-icons/ci";
-import { MdPersonOff } from "react-icons/md";
+import  { useState } from "react";
+import { IoFilter } from "react-icons/io5";
+
 import { FaCheckCircle, FaRegTimesCircle } from "react-icons/fa";
 
 interface OvertimeRequest {
