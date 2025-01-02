@@ -5,6 +5,7 @@ import './App.css'
 import Login from './content/Login'
 import Registration from './component/Registration'
 import Password from './content/Password'
+import AdminDashboard from './component/AdminDashboard'
 
 const App: React.FC=()=> {
  
@@ -15,6 +16,7 @@ const App: React.FC=()=> {
         <Route path='/login'  element={<Login/>} />
         <Route path='/signin' element={<Registration/>}/>
         <Route path='/password' element ={<Password/>}/>
+        <Route path ='/admin' element={<AdminDashboard/>}/>
     </Routes>
   )
 }

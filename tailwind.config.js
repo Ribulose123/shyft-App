@@ -6,8 +6,14 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+        openSans: ['"Open Sans"', 'sans-serif'],
+      },
+    },
   },
   plugins: [
     scrollbarHide,
